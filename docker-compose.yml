@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: my_postgres_new
+    environment:
+      POSTGRES_USER: mydb
+      POSTGRES_PASSWORD: mydb  # รหัสผ่านที่คุณต้องการ
+      POSTGRES_DB: mydb  # ชื่อของฐานข้อมูล
+    ports:
+      - "5432:5432"  # เปิดพอร์ตสำหรับเชื่อมต่อ
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # การเก็บข้อมูลของฐานข้อมูล
+
+volumes:
+  postgres_data:

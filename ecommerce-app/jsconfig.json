@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"] // การตั้งค่า alias ให้กับโฟลเดอร์ root
+    }
+  },
+  "include": ["**/*.js", "**/*.jsx", "next-env.d.ts"], 
+  "exclude": ["node_modules"]
+}
